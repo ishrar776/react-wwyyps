@@ -1,6 +1,6 @@
 import React, { useState, createContext } from 'react';
 const GlobalStateContext = createContext({});
-const GlobalStateProvider = () => {
+const GlobalStateProvider = ({ children }) => {
   const width = '100px';
   const message = 'thik hai sab kuch';
   return (
@@ -10,7 +10,7 @@ const GlobalStateProvider = () => {
         message,
       }}
     >
-      {/* {children} */}
+      {children}
     </GlobalStateContext.Provider>
   );
 };
